@@ -1,0 +1,16 @@
+2024-12-17 10:08:56,411 - INFO - GET /battery_types - Request to fetch all battery types.
+2024-12-17 10:08:56,411 - INFO - Received request to fetch all battery types
+2024-12-17 10:08:56,414 - INFO - Fetched 1 battery types
+2024-12-17 10:08:56,414 - INFO - GET /battery_types - Response sent.
+2024-12-17 10:09:08,655 - INFO - GET /battery_types - Request to fetch all battery types.
+2024-12-17 10:09:08,655 - INFO - Received request to fetch all battery types
+2024-12-17 10:09:08,655 - INFO - Fetched 1 battery types
+2024-12-17 10:09:08,655 - INFO - GET /battery_types - Response sent.
+2024-12-17 10:09:34,227 - INFO - GET /battery_types - Request to fetch all battery types.
+2024-12-17 10:09:34,228 - INFO - Received request to fetch all battery types
+2024-12-17 10:09:34,230 - INFO - Fetched 1 battery types
+2024-12-17 10:09:34,231 - INFO - GET /battery_types - Response sent.
+2024-12-17 10:14:21,857 - INFO - GET /battery_types - Request to fetch all battery types.
+2024-12-17 10:14:21,857 - INFO - Received request to fetch all battery types
+2024-12-17 10:14:21,857 - INFO - Fetched 1 battery types
+2024-12-17 10:14:21,857 - INFO - GET /battery_types - Response sent.

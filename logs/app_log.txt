@@ -11,3 +11,4 @@
 2024-12-17 10:08:45,525 - INFO - Blueprints registered successfully.
 2024-12-17 10:08:45,525 - INFO - Database tables created successfully.
 2024-12-17 10:08:45,525 - INFO - Starting Flask application.
+2024-12-17 10:15:29,942 - INFO - Flask application running on port 5002.

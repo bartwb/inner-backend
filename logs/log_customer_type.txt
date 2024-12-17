@@ -1,0 +1,12 @@
+2024-12-17 10:09:08,976 - INFO - GET /customer_types - Request to fetch all customer types.
+2024-12-17 10:09:08,977 - INFO - Received request to fetch all customer types.
+2024-12-17 10:09:08,984 - INFO - Fetched 2 customer types.
+2024-12-17 10:09:08,984 - INFO - GET /customer_types - Response sent.
+2024-12-17 10:09:34,543 - INFO - GET /customer_types - Request to fetch all customer types.
+2024-12-17 10:09:34,543 - INFO - Received request to fetch all customer types.
+2024-12-17 10:09:34,545 - INFO - Fetched 2 customer types.
+2024-12-17 10:09:34,546 - INFO - GET /customer_types - Response sent.
+2024-12-17 10:14:22,168 - INFO - GET /customer_types - Request to fetch all customer types.
+2024-12-17 10:14:22,168 - INFO - Received request to fetch all customer types.
+2024-12-17 10:14:22,172 - INFO - Fetched 2 customer types.
+2024-12-17 10:14:22,172 - INFO - GET /customer_types - Response sent.

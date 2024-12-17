@@ -1,0 +1,16 @@
+2024-12-17 10:08:56,486 - INFO - GET /customers - Request to fetch all customers.
+2024-12-17 10:08:56,486 - INFO - Received request to fetch all customers.
+2024-12-17 10:08:56,486 - INFO - Fetched 2 customers.
+2024-12-17 10:08:56,491 - INFO - GET /customers - Response sent.
+2024-12-17 10:09:08,920 - INFO - GET /customers - Request to fetch all customers.
+2024-12-17 10:09:08,921 - INFO - Received request to fetch all customers.
+2024-12-17 10:09:08,923 - INFO - Fetched 2 customers.
+2024-12-17 10:09:08,926 - INFO - GET /customers - Response sent.
+2024-12-17 10:09:34,486 - INFO - GET /customers - Request to fetch all customers.
+2024-12-17 10:09:34,486 - INFO - Received request to fetch all customers.
+2024-12-17 10:09:34,486 - INFO - Fetched 2 customers.
+2024-12-17 10:09:34,490 - INFO - GET /customers - Response sent.
+2024-12-17 10:14:21,911 - INFO - GET /customers - Request to fetch all customers.
+2024-12-17 10:14:21,911 - INFO - Received request to fetch all customers.
+2024-12-17 10:14:21,911 - INFO - Fetched 2 customers.
+2024-12-17 10:14:21,911 - INFO - GET /customers - Response sent.
