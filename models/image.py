@@ -11,6 +11,7 @@ class Image(db.Model):  # Use db.Model for consistency
 
     # Establish relationship with Battery model
     battery = db.relationship("Battery", back_populates="images")  # Match the back_populates name in Battery
+    findings = db.relationship("BatteryFinding", back_populates="images", cascade="all, delete-orphan")
 
     def to_dict(self):
         return {

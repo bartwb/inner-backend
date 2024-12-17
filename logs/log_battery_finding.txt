@@ -10,3 +10,573 @@
 2024-12-17 10:14:21,526 - INFO - Received request to fetch all battery findings.
 2024-12-17 10:14:21,530 - INFO - Fetched 1 battery findings.
 2024-12-17 10:14:21,537 - INFO - GET /battery_findings - Response sent.
+2024-12-17 13:42:40,748 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:42:40,748 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:42:40,748 - ERROR - Error while fetching battery findings for image ID 1: Entity namespace for "battery_finding" has no property "image_id"
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\sql\base.py", line 2181, in _entity_namespace_key
+    return getattr(ns, key)  # type: ignore
+           ^^^^^^^^^^^^^^^^
+AttributeError: type object 'BatteryFinding' has no attribute 'image_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\methods\battery_finding_manager.py", line 47, in get_battery_finding_by_image
+    findings = BatteryFinding.query.filter_by(image_id=image_id).all()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 1984, in filter_by
+    _entity_namespace_key(from_entity, key) == value
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\sql\base.py", line 2183, in _entity_namespace_key
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Entity namespace for "battery_finding" has no property "image_id"
+2024-12-17 13:42:40,748 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:42:41,008 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:42:41,008 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:42:41,008 - ERROR - Error while fetching battery findings for image ID 1: Entity namespace for "battery_finding" has no property "image_id"
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\sql\base.py", line 2181, in _entity_namespace_key
+    return getattr(ns, key)  # type: ignore
+           ^^^^^^^^^^^^^^^^
+AttributeError: type object 'BatteryFinding' has no attribute 'image_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\methods\battery_finding_manager.py", line 47, in get_battery_finding_by_image
+    findings = BatteryFinding.query.filter_by(image_id=image_id).all()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 1984, in filter_by
+    _entity_namespace_key(from_entity, key) == value
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\sql\base.py", line 2183, in _entity_namespace_key
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Entity namespace for "battery_finding" has no property "image_id"
+2024-12-17 13:42:41,008 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:44:55,058 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:44:55,059 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:44:55,059 - ERROR - Error while fetching battery findings for image ID 1: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[BatteryFinding(battery_finding)]'. Original exception was: Mapper 'Mapper[Image(image)]' has no property 'findings'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\methods\battery_finding_manager.py", line 47, in get_battery_finding_by_image
+    findings = BatteryFinding.query.filter_by(image_id=image_id).all()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\flask_sqlalchemy\model.py", line 22, in __get__
+    return cls.query_class(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 288, in _set_entities
+    coercions.expect(
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\sql\coercions.py", line 388, in expect
+    insp._post_inspect
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+                                           ^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2722, in _post_inspect
+    self._check_configure()
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2399, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4215, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4252, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[BatteryFinding(battery_finding)]'. Original exception was: Mapper 'Mapper[Image(image)]' has no property 'findings'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-12-17 13:44:55,068 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:44:55,323 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:44:55,324 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:44:55,324 - ERROR - Error while fetching battery findings for image ID 1: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[BatteryFinding(battery_finding)]'. Original exception was: Mapper 'Mapper[Image(image)]' has no property 'findings'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\methods\battery_finding_manager.py", line 47, in get_battery_finding_by_image
+    findings = BatteryFinding.query.filter_by(image_id=image_id).all()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\flask_sqlalchemy\model.py", line 22, in __get__
+    return cls.query_class(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 288, in _set_entities
+    coercions.expect(
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\sql\coercions.py", line 388, in expect
+    insp._post_inspect
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+                                           ^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2722, in _post_inspect
+    self._check_configure()
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2399, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4215, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4252, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[BatteryFinding(battery_finding)]'. Original exception was: Mapper 'Mapper[Image(image)]' has no property 'findings'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-12-17 13:44:55,326 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:46:34,639 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:46:34,640 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:46:34,640 - ERROR - Error while fetching battery findings for image ID 1: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Image(image)]'. Original exception was: Mapper 'Mapper[BatteryFinding(battery_finding)]' has no property 'images'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\methods\battery_finding_manager.py", line 47, in get_battery_finding_by_image
+    findings = BatteryFinding.query.filter_by(image_id=image_id).all()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\flask_sqlalchemy\model.py", line 22, in __get__
+    return cls.query_class(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 288, in _set_entities
+    coercions.expect(
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\sql\coercions.py", line 388, in expect
+    insp._post_inspect
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+                                           ^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2722, in _post_inspect
+    self._check_configure()
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2399, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4215, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4252, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Image(image)]'. Original exception was: Mapper 'Mapper[BatteryFinding(battery_finding)]' has no property 'images'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-12-17 13:46:34,650 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:46:34,902 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:46:34,903 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:46:34,903 - ERROR - Error while fetching battery findings for image ID 1: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Image(image)]'. Original exception was: Mapper 'Mapper[BatteryFinding(battery_finding)]' has no property 'images'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\methods\battery_finding_manager.py", line 47, in get_battery_finding_by_image
+    findings = BatteryFinding.query.filter_by(image_id=image_id).all()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\flask_sqlalchemy\model.py", line 22, in __get__
+    return cls.query_class(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 288, in _set_entities
+    coercions.expect(
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\sql\coercions.py", line 388, in expect
+    insp._post_inspect
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+                                           ^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2722, in _post_inspect
+    self._check_configure()
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2399, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4215, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4252, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Image(image)]'. Original exception was: Mapper 'Mapper[BatteryFinding(battery_finding)]' has no property 'images'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-12-17 13:46:34,904 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:47:20,297 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:47:20,298 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:47:20,311 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:47:20,328 - ERROR - Error while fetching battery findings for image ID 1: 'BatteryFinding' object has no attribute 'image'
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\methods\battery_finding_manager.py", line 54, in get_battery_finding_by_image
+    return jsonify([finding.to_dict() for finding in findings]), 200
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\models\battery_finding.py", line 23, in to_dict
+    "image": self.image.to_dict() if self.image else None,
+                                     ^^^^^^^^^^
+AttributeError: 'BatteryFinding' object has no attribute 'image'. Did you mean: 'images'?
+2024-12-17 13:47:20,331 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:47:20,561 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:47:20,561 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:47:20,564 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:47:20,568 - ERROR - Error while fetching battery findings for image ID 1: 'BatteryFinding' object has no attribute 'image'
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\methods\battery_finding_manager.py", line 54, in get_battery_finding_by_image
+    return jsonify([finding.to_dict() for finding in findings]), 200
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\models\battery_finding.py", line 23, in to_dict
+    "image": self.image.to_dict() if self.image else None,
+                                     ^^^^^^^^^^
+AttributeError: 'BatteryFinding' object has no attribute 'image'. Did you mean: 'images'?
+2024-12-17 13:47:20,568 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:48:07,544 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:48:07,545 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:48:07,555 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:48:07,572 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:48:07,792 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:48:07,792 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:48:07,794 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:48:07,800 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:49:41,163 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:49:41,163 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:49:41,164 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:49:41,166 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:49:41,432 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:49:41,432 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:49:41,433 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:49:41,436 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:50:20,768 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:50:20,768 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:50:20,771 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:50:20,773 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:50:21,093 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:50:21,093 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:50:21,096 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:50:21,101 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:51:38,407 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:51:38,407 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:51:38,409 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:51:38,414 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:51:38,676 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:51:38,677 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:51:38,678 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:51:38,682 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:52:52,863 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:52:52,864 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:52:52,865 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:52:52,870 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:53:04,365 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:53:04,365 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:53:04,368 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:53:04,379 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:53:04,695 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:53:04,695 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:53:04,696 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:53:04,702 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:53:47,344 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:53:47,344 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:53:47,346 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:53:47,350 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:53:47,663 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:53:47,663 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:53:47,665 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:53:47,670 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:55:21,411 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:55:21,411 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:55:21,413 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:55:21,418 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:55:21,662 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:55:21,662 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:55:21,664 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:55:21,668 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:56:31,741 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:56:31,742 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:56:31,745 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:56:31,752 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 13:56:32,010 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 13:56:32,010 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 13:56:32,012 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 13:56:32,019 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:23:37,488 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:23:37,488 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:23:37,491 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:23:37,496 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:23:37,738 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:23:37,738 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:23:37,739 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:23:37,743 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:28:09,814 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:28:09,815 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:28:09,817 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:28:09,823 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:28:10,066 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:28:10,066 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:28:10,069 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:28:10,072 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:32:55,465 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:32:55,465 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:32:55,468 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:32:55,471 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:32:55,718 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:32:55,718 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:32:55,720 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:32:55,723 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:34:11,388 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:34:11,389 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:34:11,390 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:34:11,393 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:36:27,584 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:36:27,585 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:36:27,588 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:36:27,591 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:36:27,843 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:36:27,843 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:36:27,843 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:36:27,846 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:37:34,752 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:37:34,752 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:37:34,755 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:37:34,758 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:37:35,020 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:37:35,021 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:37:35,025 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:37:35,030 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:38:43,996 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:38:43,997 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:38:43,999 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:38:44,004 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:38:44,249 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:38:44,250 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:38:44,251 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:38:44,255 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:40:23,464 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:40:23,464 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:40:23,464 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:40:23,466 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:40:23,723 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:40:23,723 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:40:23,725 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:40:23,729 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:40:54,268 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:40:54,268 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:40:54,272 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:40:54,276 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:40:54,586 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:40:54,587 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:40:54,587 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:40:54,590 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:41:14,568 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:41:14,568 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:41:14,573 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:41:14,590 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:41:14,915 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:41:14,916 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:41:14,917 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:41:14,920 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:42:58,544 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:42:58,545 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:42:58,547 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:42:58,552 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:42:58,809 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:42:58,810 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:42:58,813 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:42:58,819 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:43:28,363 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:43:28,363 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:43:28,367 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:43:28,376 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:43:28,688 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:43:28,689 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:43:28,691 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:43:28,696 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:47:22,589 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:47:22,590 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:47:22,594 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:47:22,600 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:47:22,854 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:47:22,855 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:47:22,855 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:47:22,858 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:48:23,787 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:48:23,787 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:48:23,789 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:48:23,790 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:48:24,036 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:48:24,036 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:48:24,039 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:48:24,044 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:49:53,601 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:49:53,602 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:49:53,603 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:49:53,608 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:49:53,870 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:49:53,871 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:49:53,874 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:49:53,881 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:51:33,872 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:51:33,872 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:51:33,875 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:51:33,880 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:51:34,139 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:51:34,139 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:51:34,140 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:51:34,143 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:52:19,642 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:52:19,642 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:52:19,645 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:52:19,648 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:52:19,956 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:52:19,956 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:52:19,958 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:52:19,961 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:53:02,044 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:53:02,044 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:53:02,046 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:53:02,051 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:53:02,361 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:53:02,361 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:53:02,363 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:53:02,369 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:54:40,800 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:54:40,800 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:54:40,802 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:54:40,806 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:54:41,058 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:54:41,058 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:54:41,061 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:54:41,064 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:54:56,859 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:54:56,859 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:54:56,863 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:54:56,875 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:54:57,189 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:54:57,189 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:54:57,190 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:54:57,195 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:55:56,982 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:55:56,983 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:55:56,987 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:55:56,996 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:55:57,318 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:55:57,318 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:55:57,319 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:55:57,324 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:59:12,060 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:59:12,060 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:59:12,062 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:59:12,066 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 14:59:12,318 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 14:59:12,319 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 14:59:12,321 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 14:59:12,329 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:09:15,431 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:09:15,431 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:09:15,433 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:09:15,437 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:09:15,682 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:09:15,682 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:09:15,683 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:09:15,686 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:10:07,539 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:10:07,539 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:10:07,541 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:10:07,548 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:10:07,862 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:10:07,862 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:10:07,864 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:10:07,865 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:11:53,468 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:11:53,468 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:11:53,470 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:11:53,473 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:11:53,711 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:11:53,711 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:11:53,713 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:11:53,717 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:13:20,948 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:13:20,948 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:13:20,951 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:13:20,958 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:13:21,215 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:13:21,216 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:13:21,219 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:13:21,224 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:15:10,362 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:15:10,362 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:15:10,364 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:15:10,368 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:15:10,623 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:15:10,623 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:15:10,625 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:15:10,630 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:16:25,052 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:16:25,052 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:16:25,054 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:16:25,057 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:16:25,304 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:16:25,304 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:16:25,306 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:16:25,310 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:21:38,619 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:21:38,619 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:21:38,620 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:21:38,622 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:21:38,882 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:21:38,882 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:21:38,884 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:21:38,890 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:22:16,379 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:22:16,379 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:22:16,386 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:22:16,397 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:22:16,720 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:22:16,721 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:22:16,723 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:22:16,727 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:24:23,080 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:24:23,081 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:24:23,083 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:24:23,086 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:24:23,340 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:24:23,343 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:24:23,345 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:24:23,357 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:27:58,885 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:27:58,886 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:27:58,887 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:27:58,889 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:30:04,308 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:30:04,309 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:30:04,312 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:30:04,317 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:30:04,559 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:30:04,559 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:30:04,561 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:30:04,566 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:31:25,064 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:31:25,064 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:31:25,065 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:31:25,069 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:31:25,332 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:31:25,333 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:31:25,337 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:31:25,343 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:33:58,906 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:33:58,906 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:33:58,908 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:33:58,912 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:33:59,172 - INFO - GET /battery_findings/image/1 - Request to retrieve findings by image ID.
+2024-12-17 15:33:59,173 - INFO - Received request to fetch battery findings for image ID: 1
+2024-12-17 15:33:59,174 - INFO - Fetched 1 battery findings for image ID 1.
+2024-12-17 15:33:59,177 - INFO - GET /battery_findings/image/1 - Response sent.
+2024-12-17 15:34:15,676 - INFO - PUT /battery_finding/1 - Request to update a battery finding.
+2024-12-17 15:34:15,677 - DEBUG - Request data: {'annotation': [{'toolType': 'Length', 'data': {'active': False, 'handles': {'end': {'active': False, 'highlight': True, 'x': 52, 'y': 150}, 'start': {'active': False, 'highlight': True, 'x': 54, 'y': 71}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 76.6943359375, 'height': 25, 'left': 64, 'top': 58.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 54, 'y': 71}}, 'invalidated': False, 'length': 79.02531240052139, 'visible': True}, 'note': ''}, {'toolType': 'Length', 'data': {'active': False, 'handles': {'end': {'active': False, 'highlight': True, 'x': 55, 'y': 280}, 'start': {'active': False, 'highlight': True, 'x': 346, 'y': 135}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 85.03662109375, 'height': 25, 'left': 356, 'top': 122.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 346, 'y': 135}}, 'invalidated': False, 'length': 325.12459150301135, 'visible': True}, 'note': ''}, {'toolType': 'Probe', 'data': {'active': False, 'cachedStats': {'storedPixels': [77, 77, 77, 255], 'x': 631, 'y': 155}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 631, 'y': 155}}, 'invalidated': False, 'visible': True}, 'note': ''}, {'toolType': 'Probe', 'data': {'visible': True, 'active': False, 'invalidated': False, 'handles': {'end': {'x': 343.46875, 'y': 282, 'highlight': True, 'active': False}}, 'cachedStats': {'x': 343, 'y': 282, 'storedPixels': [124, 124, 124, 255]}}, 'note': ''}, {'toolType': 'EllipticalRoi', 'data': {'active': False, 'cachedStats': {'area': 6744.999427257286, 'count': 6741, 'max': 255, 'mean': 151.28749443702714, 'min': 99, 'stdDev': 60.21051044693797, 'variance': 3625.3055682808263}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 77, 'y': 510}, 'initialRotation': 0, 'start': {'active': False, 'highlight': True, 'x': 1, 'y': 397}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 142.56103515625, 'height': 25, 'left': 87, 'top': 441}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 77, 'y': 453.5}}, 'invalidated': False, 'visible': True}, 'note': ''}, {'toolType': 'RectangleRoi', 'data': {'active': False, 'cachedStats': {'area': 12416, 'count': 12416, 'max': 255, 'mean': 147.71005154639175, 'min': 56, 'stdDev': 63.19548618144087, 'variance': 3993.6694737086837}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 565, 'y': 446}, 'initialRotation': 0, 'start': {'active': False, 'highlight': True, 'x': 662, 'y': 318}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 150.9033203125, 'height': 25, 'left': 672, 'top': 369.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 662, 'y': 382}}, 'invalidated': False, 'visible': True}, 'note': ''}], 'battery': {'battery_type': {'id': 2, 'name': 'Audi E242', 'serial_number': 'REE2343REE'}, 'battery_type_id': 2, 'build_year': '2022', 'comment': '', 'customer': {'city': 'Test', 'country': 'Test', 'customer_type': {'id': 1, 'name': 'b2b'}, 'customer_type_id': 1, 'email_address': 'Test', 'house_number': '1', 'id': 1, 'name': 'Test', 'phone_number': 'Test', 'street_name': 'Teststraat'}, 'customer_id': 1, 'id': 2, 'main_reason': 'Accident', 'serial_number': 'REE2343REE', 'total_distance': 2353}, 'battery_id': 2, 'id': 1, 'image': {'battery': {'battery_type': {'id': 2, 'name': 'Audi E242', 'serial_number': 'REE2343REE'}, 'battery_type_id': 2, 'build_year': '2022', 'comment': '', 'customer': {'city': 'Test', 'country': 'Test', 'customer_type': {'id': 1, 'name': 'b2b'}, 'customer_type_id': 1, 'email_address': 'Test', 'house_number': '1', 'id': 1, 'name': 'Test', 'phone_number': 'Test', 'street_name': 'Teststraat'}, 'customer_id': 1, 'id': 2, 'main_reason': 'Accident', 'serial_number': 'REE2343REE', 'total_distance': 2353}, 'battery_id': 2, 'blob_url': 'test blobname', 'file_name': 'test.txt', 'id': 1, 'slide': 1}, 'image_id': 1}
+2024-12-17 15:34:15,678 - INFO - Received request to update battery finding with ID: 1
+2024-12-17 15:34:15,678 - DEBUG - Request data: {'annotation': [{'toolType': 'Length', 'data': {'active': False, 'handles': {'end': {'active': False, 'highlight': True, 'x': 52, 'y': 150}, 'start': {'active': False, 'highlight': True, 'x': 54, 'y': 71}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 76.6943359375, 'height': 25, 'left': 64, 'top': 58.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 54, 'y': 71}}, 'invalidated': False, 'length': 79.02531240052139, 'visible': True}, 'note': ''}, {'toolType': 'Length', 'data': {'active': False, 'handles': {'end': {'active': False, 'highlight': True, 'x': 55, 'y': 280}, 'start': {'active': False, 'highlight': True, 'x': 346, 'y': 135}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 85.03662109375, 'height': 25, 'left': 356, 'top': 122.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 346, 'y': 135}}, 'invalidated': False, 'length': 325.12459150301135, 'visible': True}, 'note': ''}, {'toolType': 'Probe', 'data': {'active': False, 'cachedStats': {'storedPixels': [77, 77, 77, 255], 'x': 631, 'y': 155}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 631, 'y': 155}}, 'invalidated': False, 'visible': True}, 'note': ''}, {'toolType': 'Probe', 'data': {'visible': True, 'active': False, 'invalidated': False, 'handles': {'end': {'x': 343.46875, 'y': 282, 'highlight': True, 'active': False}}, 'cachedStats': {'x': 343, 'y': 282, 'storedPixels': [124, 124, 124, 255]}}, 'note': ''}, {'toolType': 'EllipticalRoi', 'data': {'active': False, 'cachedStats': {'area': 6744.999427257286, 'count': 6741, 'max': 255, 'mean': 151.28749443702714, 'min': 99, 'stdDev': 60.21051044693797, 'variance': 3625.3055682808263}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 77, 'y': 510}, 'initialRotation': 0, 'start': {'active': False, 'highlight': True, 'x': 1, 'y': 397}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 142.56103515625, 'height': 25, 'left': 87, 'top': 441}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 77, 'y': 453.5}}, 'invalidated': False, 'visible': True}, 'note': ''}, {'toolType': 'RectangleRoi', 'data': {'active': False, 'cachedStats': {'area': 12416, 'count': 12416, 'max': 255, 'mean': 147.71005154639175, 'min': 56, 'stdDev': 63.19548618144087, 'variance': 3993.6694737086837}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 565, 'y': 446}, 'initialRotation': 0, 'start': {'active': False, 'highlight': True, 'x': 662, 'y': 318}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 150.9033203125, 'height': 25, 'left': 672, 'top': 369.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 662, 'y': 382}}, 'invalidated': False, 'visible': True}, 'note': ''}], 'battery': {'battery_type': {'id': 2, 'name': 'Audi E242', 'serial_number': 'REE2343REE'}, 'battery_type_id': 2, 'build_year': '2022', 'comment': '', 'customer': {'city': 'Test', 'country': 'Test', 'customer_type': {'id': 1, 'name': 'b2b'}, 'customer_type_id': 1, 'email_address': 'Test', 'house_number': '1', 'id': 1, 'name': 'Test', 'phone_number': 'Test', 'street_name': 'Teststraat'}, 'customer_id': 1, 'id': 2, 'main_reason': 'Accident', 'serial_number': 'REE2343REE', 'total_distance': 2353}, 'battery_id': 2, 'id': 1, 'image': {'battery': {'battery_type': {'id': 2, 'name': 'Audi E242', 'serial_number': 'REE2343REE'}, 'battery_type_id': 2, 'build_year': '2022', 'comment': '', 'customer': {'city': 'Test', 'country': 'Test', 'customer_type': {'id': 1, 'name': 'b2b'}, 'customer_type_id': 1, 'email_address': 'Test', 'house_number': '1', 'id': 1, 'name': 'Test', 'phone_number': 'Test', 'street_name': 'Teststraat'}, 'customer_id': 1, 'id': 2, 'main_reason': 'Accident', 'serial_number': 'REE2343REE', 'total_distance': 2353}, 'battery_id': 2, 'blob_url': 'test blobname', 'file_name': 'test.txt', 'id': 1, 'slide': 1}, 'image_id': 1}
+2024-12-17 15:34:15,686 - DEBUG - Updated annotation to [{'toolType': 'Length', 'data': {'active': False, 'handles': {'end': {'active': False, 'highlight': True, 'x': 52, 'y': 150}, 'start': {'active': False, 'highlight': True, 'x': 54, 'y': 71}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 76.6943359375, 'height': 25, 'left': 64, 'top': 58.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 54, 'y': 71}}, 'invalidated': False, 'length': 79.02531240052139, 'visible': True}, 'note': ''}, {'toolType': 'Length', 'data': {'active': False, 'handles': {'end': {'active': False, 'highlight': True, 'x': 55, 'y': 280}, 'start': {'active': False, 'highlight': True, 'x': 346, 'y': 135}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 85.03662109375, 'height': 25, 'left': 356, 'top': 122.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 346, 'y': 135}}, 'invalidated': False, 'length': 325.12459150301135, 'visible': True}, 'note': ''}, {'toolType': 'Probe', 'data': {'active': False, 'cachedStats': {'storedPixels': [77, 77, 77, 255], 'x': 631, 'y': 155}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 631, 'y': 155}}, 'invalidated': False, 'visible': True}, 'note': ''}, {'toolType': 'Probe', 'data': {'visible': True, 'active': False, 'invalidated': False, 'handles': {'end': {'x': 343.46875, 'y': 282, 'highlight': True, 'active': False}}, 'cachedStats': {'x': 343, 'y': 282, 'storedPixels': [124, 124, 124, 255]}}, 'note': ''}, {'toolType': 'EllipticalRoi', 'data': {'active': False, 'cachedStats': {'area': 6744.999427257286, 'count': 6741, 'max': 255, 'mean': 151.28749443702714, 'min': 99, 'stdDev': 60.21051044693797, 'variance': 3625.3055682808263}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 77, 'y': 510}, 'initialRotation': 0, 'start': {'active': False, 'highlight': True, 'x': 1, 'y': 397}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 142.56103515625, 'height': 25, 'left': 87, 'top': 441}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 77, 'y': 453.5}}, 'invalidated': False, 'visible': True}, 'note': ''}, {'toolType': 'RectangleRoi', 'data': {'active': False, 'cachedStats': {'area': 12416, 'count': 12416, 'max': 255, 'mean': 147.71005154639175, 'min': 56, 'stdDev': 63.19548618144087, 'variance': 3993.6694737086837}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 565, 'y': 446}, 'initialRotation': 0, 'start': {'active': False, 'highlight': True, 'x': 662, 'y': 318}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 150.9033203125, 'height': 25, 'left': 672, 'top': 369.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 662, 'y': 382}}, 'invalidated': False, 'visible': True}, 'note': ''}] for battery finding ID 1
+2024-12-17 15:34:15,687 - ERROR - Error while updating battery finding with ID 1: 'dict' object has no attribute '_sa_instance_state'
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\methods\battery_finding_manager.py", line 97, in update_battery_finding
+    setattr(finding, key, value)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 537, in __set__
+    self.impl.set(
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 1467, in set
+    value = self.fire_replace_event(state, dict_, value, old, initiator)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 1506, in fire_replace_event
+    value = fn(
+            ^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 120, in set_
+    newvalue_state = attributes.instance_state(newvalue)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute '_sa_instance_state'
+2024-12-17 15:34:15,696 - INFO - PUT /battery_finding/1 - Response sent.
+2024-12-17 15:40:02,176 - INFO - PUT /battery_finding/1 - Request to update a battery finding.
+2024-12-17 15:40:02,178 - DEBUG - Request data: {'annotation': [{'toolType': 'Length', 'data': {'active': False, 'handles': {'end': {'active': False, 'highlight': True, 'x': 52, 'y': 150}, 'start': {'active': False, 'highlight': True, 'x': 54, 'y': 71}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 76.6943359375, 'height': 25, 'left': 64, 'top': 58.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 54, 'y': 71}}, 'invalidated': False, 'length': 79.02531240052139, 'visible': True}, 'note': ''}, {'toolType': 'Length', 'data': {'active': False, 'handles': {'end': {'active': False, 'highlight': True, 'x': 55, 'y': 280}, 'start': {'active': False, 'highlight': True, 'x': 346, 'y': 135}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 85.03662109375, 'height': 25, 'left': 356, 'top': 122.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 346, 'y': 135}}, 'invalidated': False, 'length': 325.12459150301135, 'visible': True}, 'note': ''}, {'toolType': 'Probe', 'data': {'active': False, 'cachedStats': {'storedPixels': [77, 77, 77, 255], 'x': 631, 'y': 155}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 631, 'y': 155}}, 'invalidated': False, 'visible': True}, 'note': ''}, {'toolType': 'Probe', 'data': {'visible': True, 'active': False, 'invalidated': False, 'handles': {'end': {'x': 343.46875, 'y': 282, 'highlight': True, 'active': False}}, 'cachedStats': {'x': 343, 'y': 282, 'storedPixels': [124, 124, 124, 255]}}, 'note': ''}, {'toolType': 'EllipticalRoi', 'data': {'active': False, 'cachedStats': {'area': 6744.999427257286, 'count': 6741, 'max': 255, 'mean': 151.28749443702714, 'min': 99, 'stdDev': 60.21051044693797, 'variance': 3625.3055682808263}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 77, 'y': 510}, 'initialRotation': 0, 'start': {'active': False, 'highlight': True, 'x': 1, 'y': 397}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 142.56103515625, 'height': 25, 'left': 87, 'top': 441}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 77, 'y': 453.5}}, 'invalidated': False, 'visible': True}, 'note': ''}, {'toolType': 'RectangleRoi', 'data': {'active': False, 'cachedStats': {'area': 12416, 'count': 12416, 'max': 255, 'mean': 147.71005154639175, 'min': 56, 'stdDev': 63.19548618144087, 'variance': 3993.6694737086837}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 565, 'y': 446}, 'initialRotation': 0, 'start': {'active': False, 'highlight': True, 'x': 662, 'y': 318}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 150.9033203125, 'height': 25, 'left': 672, 'top': 369.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 662, 'y': 382}}, 'invalidated': False, 'visible': True}, 'note': ''}], 'battery': {'battery_type': {'id': 2, 'name': 'Audi E242', 'serial_number': 'REE2343REE'}, 'battery_type_id': 2, 'build_year': '2022', 'comment': '', 'customer': {'city': 'Test', 'country': 'Test', 'customer_type': {'id': 1, 'name': 'b2b'}, 'customer_type_id': 1, 'email_address': 'Test', 'house_number': '1', 'id': 1, 'name': 'Test', 'phone_number': 'Test', 'street_name': 'Teststraat'}, 'customer_id': 1, 'id': 2, 'main_reason': 'Accident', 'serial_number': 'REE2343REE', 'total_distance': 2353}, 'battery_id': 2, 'id': 1, 'image': {'battery': {'battery_type': {'id': 2, 'name': 'Audi E242', 'serial_number': 'REE2343REE'}, 'battery_type_id': 2, 'build_year': '2022', 'comment': '', 'customer': {'city': 'Test', 'country': 'Test', 'customer_type': {'id': 1, 'name': 'b2b'}, 'customer_type_id': 1, 'email_address': 'Test', 'house_number': '1', 'id': 1, 'name': 'Test', 'phone_number': 'Test', 'street_name': 'Teststraat'}, 'customer_id': 1, 'id': 2, 'main_reason': 'Accident', 'serial_number': 'REE2343REE', 'total_distance': 2353}, 'battery_id': 2, 'blob_url': 'test blobname', 'file_name': 'test.txt', 'id': 1, 'slide': 1}, 'image_id': 1}
+2024-12-17 15:40:02,178 - INFO - Received request to update battery finding with ID: 1
+2024-12-17 15:40:02,179 - DEBUG - Request data: {'annotation': [{'toolType': 'Length', 'data': {'active': False, 'handles': {'end': {'active': False, 'highlight': True, 'x': 52, 'y': 150}, 'start': {'active': False, 'highlight': True, 'x': 54, 'y': 71}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 76.6943359375, 'height': 25, 'left': 64, 'top': 58.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 54, 'y': 71}}, 'invalidated': False, 'length': 79.02531240052139, 'visible': True}, 'note': ''}, {'toolType': 'Length', 'data': {'active': False, 'handles': {'end': {'active': False, 'highlight': True, 'x': 55, 'y': 280}, 'start': {'active': False, 'highlight': True, 'x': 346, 'y': 135}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 85.03662109375, 'height': 25, 'left': 356, 'top': 122.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 346, 'y': 135}}, 'invalidated': False, 'length': 325.12459150301135, 'visible': True}, 'note': ''}, {'toolType': 'Probe', 'data': {'active': False, 'cachedStats': {'storedPixels': [77, 77, 77, 255], 'x': 631, 'y': 155}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 631, 'y': 155}}, 'invalidated': False, 'visible': True}, 'note': ''}, {'toolType': 'Probe', 'data': {'visible': True, 'active': False, 'invalidated': False, 'handles': {'end': {'x': 343.46875, 'y': 282, 'highlight': True, 'active': False}}, 'cachedStats': {'x': 343, 'y': 282, 'storedPixels': [124, 124, 124, 255]}}, 'note': ''}, {'toolType': 'EllipticalRoi', 'data': {'active': False, 'cachedStats': {'area': 6744.999427257286, 'count': 6741, 'max': 255, 'mean': 151.28749443702714, 'min': 99, 'stdDev': 60.21051044693797, 'variance': 3625.3055682808263}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 77, 'y': 510}, 'initialRotation': 0, 'start': {'active': False, 'highlight': True, 'x': 1, 'y': 397}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 142.56103515625, 'height': 25, 'left': 87, 'top': 441}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 77, 'y': 453.5}}, 'invalidated': False, 'visible': True}, 'note': ''}, {'toolType': 'RectangleRoi', 'data': {'active': False, 'cachedStats': {'area': 12416, 'count': 12416, 'max': 255, 'mean': 147.71005154639175, 'min': 56, 'stdDev': 63.19548618144087, 'variance': 3993.6694737086837}, 'handles': {'end': {'active': False, 'highlight': True, 'x': 565, 'y': 446}, 'initialRotation': 0, 'start': {'active': False, 'highlight': True, 'x': 662, 'y': 318}, 'textBox': {'active': False, 'allowedOutsideImage': True, 'boundingBox': {'width': 150.9033203125, 'height': 25, 'left': 672, 'top': 369.5}, 'drawnIndependently': True, 'hasBoundingBox': True, 'hasMoved': False, 'movesIndependently': False, 'x': 662, 'y': 382}}, 'invalidated': False, 'visible': True}, 'note': ''}], 'battery': {'battery_type': {'id': 2, 'name': 'Audi E242', 'serial_number': 'REE2343REE'}, 'battery_type_id': 2, 'build_year': '2022', 'comment': '', 'customer': {'city': 'Test', 'country': 'Test', 'customer_type': {'id': 1, 'name': 'b2b'}, 'customer_type_id': 1, 'email_address': 'Test', 'house_number': '1', 'id': 1, 'name': 'Test', 'phone_number': 'Test', 'street_name': 'Teststraat'}, 'customer_id': 1, 'id': 2, 'main_reason': 'Accident', 'serial_number': 'REE2343REE', 'total_distance': 2353}, 'battery_id': 2, 'id': 1, 'image': {'battery': {'battery_type': {'id': 2, 'name': 'Audi E242', 'serial_number': 'REE2343REE'}, 'battery_type_id': 2, 'build_year': '2022', 'comment': '', 'customer': {'city': 'Test', 'country': 'Test', 'customer_type': {'id': 1, 'name': 'b2b'}, 'customer_type_id': 1, 'email_address': 'Test', 'house_number': '1', 'id': 1, 'name': 'Test', 'phone_number': 'Test', 'street_name': 'Teststraat'}, 'customer_id': 1, 'id': 2, 'main_reason': 'Accident', 'serial_number': 'REE2343REE', 'total_distance': 2353}, 'battery_id': 2, 'blob_url': 'test blobname', 'file_name': 'test.txt', 'id': 1, 'slide': 1}, 'image_id': 1}
+2024-12-17 15:40:02,188 - DEBUG - Updated annotation for battery finding ID 1
+2024-12-17 15:40:02,205 - ERROR - Error while updating battery finding with ID 1: 'dict' object has no attribute '_sa_instance_state'
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\methods\battery_finding_manager.py", line 101, in update_battery_finding
+    setattr(finding, key, value)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 537, in __set__
+    self.impl.set(
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 1467, in set
+    value = self.fire_replace_event(state, dict_, value, old, initiator)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 1506, in fire_replace_event
+    value = fn(
+            ^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 120, in set_
+    newvalue_state = attributes.instance_state(newvalue)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute '_sa_instance_state'
+2024-12-17 15:40:02,208 - INFO - PUT /battery_finding/1 - Response sent.

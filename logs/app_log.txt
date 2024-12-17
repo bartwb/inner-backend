@@ -12,3 +12,149 @@
 2024-12-17 10:08:45,525 - INFO - Database tables created successfully.
 2024-12-17 10:08:45,525 - INFO - Starting Flask application.
 2024-12-17 10:15:29,942 - INFO - Flask application running on port 5002.
+2024-12-17 13:42:30,468 - INFO - Starting application setup in connection_manager.py
+2024-12-17 13:42:30,470 - DEBUG - Database URI set to: sqlite:///C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\test.db
+2024-12-17 13:42:30,470 - INFO - Enabling CORS for the application
+2024-12-17 13:42:30,470 - INFO - Initializing Flask-Migrate for database migrations
+2024-12-17 13:42:30,472 - INFO - Importing models...
+2024-12-17 13:42:30,487 - INFO - Models imported successfully
+2024-12-17 13:42:30,487 - INFO - Initializing database with Flask app context
+2024-12-17 13:42:30,504 - INFO - Database initialized successfully
+2024-12-17 13:42:30,524 - INFO - Mappers configured successfully.
+2024-12-17 13:42:30,524 - INFO - Registering blueprints.
+2024-12-17 13:42:30,531 - INFO - Blueprints registered successfully.
+2024-12-17 13:42:30,538 - INFO - Database tables created successfully.
+2024-12-17 13:42:30,538 - INFO - Starting Flask application.
+2024-12-17 13:44:00,942 - INFO - Flask application running on port 5002.
+2024-12-17 13:44:28,274 - INFO - Starting application setup in connection_manager.py
+2024-12-17 13:44:28,275 - DEBUG - Database URI set to: sqlite:///C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\test.db
+2024-12-17 13:44:28,275 - INFO - Enabling CORS for the application
+2024-12-17 13:44:28,275 - INFO - Initializing Flask-Migrate for database migrations
+2024-12-17 13:44:28,276 - INFO - Importing models...
+2024-12-17 13:44:28,297 - INFO - Models imported successfully
+2024-12-17 13:44:28,297 - INFO - Initializing database with Flask app context
+2024-12-17 13:44:28,315 - INFO - Database initialized successfully
+2024-12-17 13:44:28,329 - ERROR - Error configuring mappers: Mapper 'Mapper[Image(image)]' has no property 'findings'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2520, in get_property
+    return self._props[key]
+           ~~~~~~~~~~~^^^^^
+KeyError: 'findings'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\app.py", line 27, in <module>
+    configure_mappers()
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4184, in configure_mappers
+    _configure_registries(_all_registries(), cascade=True)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4215, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4256, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2416, in _post_configure_properties
+    prop.init()
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\interfaces.py", line 589, in init
+    self.do_init()
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\relationships.py", line 1647, in do_init
+    self._generate_backref()
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\relationships.py", line 2133, in _generate_backref
+    self._add_reverse_property(self.back_populates)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\relationships.py", line 1578, in _add_reverse_property
+    other = self.mapper.get_property(key, _configure_mappers=False)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2522, in get_property
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Mapper 'Mapper[Image(image)]' has no property 'findings'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-12-17 13:44:28,333 - INFO - Registering blueprints.
+2024-12-17 13:44:28,340 - INFO - Blueprints registered successfully.
+2024-12-17 13:44:28,342 - INFO - Database tables created successfully.
+2024-12-17 13:44:28,342 - INFO - Starting Flask application.
+2024-12-17 13:46:26,717 - INFO - Flask application running on port 5002.
+2024-12-17 13:46:28,258 - INFO - Starting application setup in connection_manager.py
+2024-12-17 13:46:28,260 - DEBUG - Database URI set to: sqlite:///C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\test.db
+2024-12-17 13:46:28,260 - INFO - Enabling CORS for the application
+2024-12-17 13:46:28,260 - INFO - Initializing Flask-Migrate for database migrations
+2024-12-17 13:46:28,261 - INFO - Importing models...
+2024-12-17 13:46:28,277 - INFO - Models imported successfully
+2024-12-17 13:46:28,277 - INFO - Initializing database with Flask app context
+2024-12-17 13:46:28,296 - INFO - Database initialized successfully
+2024-12-17 13:46:28,311 - ERROR - Error configuring mappers: Mapper 'Mapper[BatteryFinding(battery_finding)]' has no property 'images'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2520, in get_property
+    return self._props[key]
+           ~~~~~~~~~~~^^^^^
+KeyError: 'images'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\app.py", line 27, in <module>
+    configure_mappers()
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4184, in configure_mappers
+    _configure_registries(_all_registries(), cascade=True)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4215, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4256, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2416, in _post_configure_properties
+    prop.init()
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\interfaces.py", line 589, in init
+    self.do_init()
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\relationships.py", line 1647, in do_init
+    self._generate_backref()
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\relationships.py", line 2133, in _generate_backref
+    self._add_reverse_property(self.back_populates)
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\relationships.py", line 1578, in _add_reverse_property
+    other = self.mapper.get_property(key, _configure_mappers=False)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2522, in get_property
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Mapper 'Mapper[BatteryFinding(battery_finding)]' has no property 'images'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-12-17 13:46:28,314 - INFO - Registering blueprints.
+2024-12-17 13:46:28,322 - INFO - Blueprints registered successfully.
+2024-12-17 13:46:28,324 - INFO - Database tables created successfully.
+2024-12-17 13:46:28,324 - INFO - Starting Flask application.
+2024-12-17 13:47:12,828 - INFO - Flask application running on port 5002.
+2024-12-17 13:47:14,295 - INFO - Starting application setup in connection_manager.py
+2024-12-17 13:47:14,296 - DEBUG - Database URI set to: sqlite:///C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\test.db
+2024-12-17 13:47:14,296 - INFO - Enabling CORS for the application
+2024-12-17 13:47:14,296 - INFO - Initializing Flask-Migrate for database migrations
+2024-12-17 13:47:14,297 - INFO - Importing models...
+2024-12-17 13:47:14,310 - INFO - Models imported successfully
+2024-12-17 13:47:14,310 - INFO - Initializing database with Flask app context
+2024-12-17 13:47:14,320 - INFO - Database initialized successfully
+2024-12-17 13:47:14,335 - INFO - Mappers configured successfully.
+2024-12-17 13:47:14,335 - INFO - Registering blueprints.
+2024-12-17 13:47:14,342 - INFO - Blueprints registered successfully.
+2024-12-17 13:47:14,343 - INFO - Database tables created successfully.
+2024-12-17 13:47:14,344 - INFO - Starting Flask application.
+2024-12-17 13:48:00,548 - INFO - Flask application running on port 5002.
+2024-12-17 13:48:01,994 - INFO - Starting application setup in connection_manager.py
+2024-12-17 13:48:01,995 - DEBUG - Database URI set to: sqlite:///C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\test.db
+2024-12-17 13:48:01,995 - INFO - Enabling CORS for the application
+2024-12-17 13:48:01,995 - INFO - Initializing Flask-Migrate for database migrations
+2024-12-17 13:48:01,996 - INFO - Importing models...
+2024-12-17 13:48:02,007 - INFO - Models imported successfully
+2024-12-17 13:48:02,007 - INFO - Initializing database with Flask app context
+2024-12-17 13:48:02,018 - INFO - Database initialized successfully
+2024-12-17 13:48:02,032 - INFO - Mappers configured successfully.
+2024-12-17 13:48:02,032 - INFO - Registering blueprints.
+2024-12-17 13:48:02,042 - INFO - Blueprints registered successfully.
+2024-12-17 13:48:02,044 - INFO - Database tables created successfully.
+2024-12-17 13:48:02,044 - INFO - Starting Flask application.
+2024-12-17 15:39:51,054 - INFO - Flask application running on port 5002.
+2024-12-17 15:39:52,627 - INFO - Starting application setup in connection_manager.py
+2024-12-17 15:39:52,628 - DEBUG - Database URI set to: sqlite:///C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\test.db
+2024-12-17 15:39:52,628 - INFO - Enabling CORS for the application
+2024-12-17 15:39:52,628 - INFO - Initializing Flask-Migrate for database migrations
+2024-12-17 15:39:52,630 - INFO - Importing models...
+2024-12-17 15:39:52,640 - INFO - Models imported successfully
+2024-12-17 15:39:52,640 - INFO - Initializing database with Flask app context
+2024-12-17 15:39:52,652 - INFO - Database initialized successfully
+2024-12-17 15:39:52,669 - INFO - Mappers configured successfully.
+2024-12-17 15:39:52,669 - INFO - Registering blueprints.
+2024-12-17 15:39:52,677 - INFO - Blueprints registered successfully.
+2024-12-17 15:39:52,679 - INFO - Database tables created successfully.
+2024-12-17 15:39:52,679 - INFO - Starting Flask application.
+2024-12-17 15:41:18,714 - INFO - Flask application running on port 5002.
