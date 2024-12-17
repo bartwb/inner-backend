@@ -1,0 +1,12 @@
+2024-12-17 10:09:08,606 - INFO - GET /battery_logs - Request to retrieve all battery logs.
+2024-12-17 10:09:08,606 - INFO - Received request to fetch all battery logs.
+2024-12-17 10:09:08,610 - INFO - Fetched 0 battery logs.
+2024-12-17 10:09:08,610 - INFO - GET /battery_logs - Response sent.
+2024-12-17 10:09:34,158 - INFO - GET /battery_logs - Request to retrieve all battery logs.
+2024-12-17 10:09:34,158 - INFO - Received request to fetch all battery logs.
+2024-12-17 10:09:34,158 - INFO - Fetched 0 battery logs.
+2024-12-17 10:09:34,158 - INFO - GET /battery_logs - Response sent.
+2024-12-17 10:14:21,594 - INFO - GET /battery_logs - Request to retrieve all battery logs.
+2024-12-17 10:14:21,594 - INFO - Received request to fetch all battery logs.
+2024-12-17 10:14:21,594 - INFO - Fetched 1 battery logs.
+2024-12-17 10:14:21,594 - INFO - GET /battery_logs - Response sent.

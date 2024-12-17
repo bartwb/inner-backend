@@ -1,0 +1,13 @@
+2024-12-17 10:08:45,450 - INFO - Starting application setup in connection_manager.py
+2024-12-17 10:08:45,450 - DEBUG - Database URI set to: sqlite:///C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\test.db
+2024-12-17 10:08:45,450 - INFO - Enabling CORS for the application
+2024-12-17 10:08:45,450 - INFO - Initializing Flask-Migrate for database migrations
+2024-12-17 10:08:45,460 - INFO - Importing models...
+2024-12-17 10:08:45,469 - INFO - Models imported successfully
+2024-12-17 10:08:45,469 - INFO - Initializing database with Flask app context
+2024-12-17 10:08:45,479 - INFO - Database initialized successfully
+2024-12-17 10:08:45,515 - INFO - Mappers configured successfully.
+2024-12-17 10:08:45,515 - INFO - Registering blueprints.
+2024-12-17 10:08:45,525 - INFO - Blueprints registered successfully.
+2024-12-17 10:08:45,525 - INFO - Database tables created successfully.
+2024-12-17 10:08:45,525 - INFO - Starting Flask application.

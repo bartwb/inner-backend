@@ -1,0 +1,12 @@
+2024-12-17 10:09:08,342 - INFO - GET /battery_findings - Request to retrieve all battery findings.
+2024-12-17 10:09:08,342 - INFO - Received request to fetch all battery findings.
+2024-12-17 10:09:08,342 - INFO - Fetched 0 battery findings.
+2024-12-17 10:09:08,342 - INFO - GET /battery_findings - Response sent.
+2024-12-17 10:09:33,893 - INFO - GET /battery_findings - Request to retrieve all battery findings.
+2024-12-17 10:09:33,893 - INFO - Received request to fetch all battery findings.
+2024-12-17 10:09:33,893 - INFO - Fetched 0 battery findings.
+2024-12-17 10:09:33,893 - INFO - GET /battery_findings - Response sent.
+2024-12-17 10:14:21,526 - INFO - GET /battery_findings - Request to retrieve all battery findings.
+2024-12-17 10:14:21,526 - INFO - Received request to fetch all battery findings.
+2024-12-17 10:14:21,530 - INFO - Fetched 1 battery findings.
+2024-12-17 10:14:21,537 - INFO - GET /battery_findings - Response sent.
