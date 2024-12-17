@@ -158,3 +158,17 @@ sqlalchemy.exc.InvalidRequestError: Mapper 'Mapper[BatteryFinding(battery_findin
 2024-12-17 15:39:52,679 - INFO - Database tables created successfully.
 2024-12-17 15:39:52,679 - INFO - Starting Flask application.
 2024-12-17 15:41:18,714 - INFO - Flask application running on port 5002.
+2024-12-17 15:41:20,205 - INFO - Starting application setup in connection_manager.py
+2024-12-17 15:41:20,207 - DEBUG - Database URI set to: sqlite:///C:\Users\BartvandenHoven\OneDrive - Ciratum B.V\Documenten\School\S6\Sprint 2\Backend\test.db
+2024-12-17 15:41:20,207 - INFO - Enabling CORS for the application
+2024-12-17 15:41:20,207 - INFO - Initializing Flask-Migrate for database migrations
+2024-12-17 15:41:20,208 - INFO - Importing models...
+2024-12-17 15:41:20,219 - INFO - Models imported successfully
+2024-12-17 15:41:20,219 - INFO - Initializing database with Flask app context
+2024-12-17 15:41:20,229 - INFO - Database initialized successfully
+2024-12-17 15:41:20,251 - INFO - Mappers configured successfully.
+2024-12-17 15:41:20,251 - INFO - Registering blueprints.
+2024-12-17 15:41:20,260 - INFO - Blueprints registered successfully.
+2024-12-17 15:41:20,262 - INFO - Database tables created successfully.
+2024-12-17 15:41:20,262 - INFO - Starting Flask application.
+2024-12-17 18:40:26,766 - INFO - Flask application running on port 5002.
